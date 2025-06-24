@@ -15,5 +15,11 @@ module.exports = {
   coveragePathIgnorePatterns: [
     '/node_modules/',
     '/dist/'
-  ]
+  ],
+  setupFilesAfterEnv: ['<rootDir>/src/__tests__/_helpers/prisma_mock.ts'],
+   testPathIgnorePatterns: [
+    '/node_modules/',
+    '/dist/',
+    '/__tests__/_helpers/prisma_mock.ts'  // Añade esta línea
+  ],
 };
